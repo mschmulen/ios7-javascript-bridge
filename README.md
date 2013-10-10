@@ -29,7 +29,7 @@ Several other cross platform technology tools have been created over the years t
 - [Appcelerator's Titanium ]( http://www.appcelerator.com ) provides a very similar bridge technology to build Native iOS Apps with JavaScript
 - [Phone Gap's, Cordova]( http://cordova.apache.org ) popular hybrid bridge for using HTML views inside a native container
 - [ImpactJS]( http://cordova.apache.org ) is a game oriented javascript bridge configuration.
-- Even Zynga has a [js binding solution] (https://github.com/zynga/jsbindings)
+- Even Zynga has a solution [jsbindings ] (https://github.com/zynga/jsbindings)
 - Additional companies such as Xamarin and Ruby Motion do the same for C# and Ruby languages.  
 
 Apples iOS7 support of JavaScript inline with your Objective-C code validates JavaScript as the leading ( and only ) non proprietary language that is supported within the iOS development environment by the device manufacturer.
