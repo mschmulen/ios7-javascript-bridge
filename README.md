@@ -53,19 +53,18 @@ A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSS
 
 JSValue automatically wraps many JavaScript value types, including language primitives and object types.  There are some additional helper methods for common use cases such as NSArray and NSDictionary.
 
-A listing of some of the supported objects that are automatically bridged for you.
-
-Objective-C type => JavaScript type
-id => Wrapper object 
-Class => Constructor object
-nil => undefined
-NSNull => null
-NSString => string
-NSNumber => number, boolean
-NSDictionary => Object object
-NSArray => Array object
-NSDate  => Date object
-NSBlock => Function object
+A listing of some of the supported objects that are automatically bridged for you:
+- Objective-C type => JavaScript type
+- id => Wrapper object 
+- Class => Constructor object
+- nil => undefined
+- NSNull => null
+- NSString => string
+- NSNumber => number, boolean
+- NSDictionary => Object object
+- NSArray => Array object
+- NSDate  => Date object
+- NSBlock => Function object
 
 ### Simple Execution
 
