@@ -1,10 +1,10 @@
-
 ## Intro to Apple's new iOS7 native JavaScript bridge
 
-Native iOS7 support for JavaScript is amazing for 3 reasons:
 
-1. JavaScript support in your Objective-C from Apple. means developers don't need 3rd party JavaScript Bridge technology such as Appcelerator, or Cordova (Phone Gap) to leverage the power of JavaScript for Native Mobile.
-2. Direct binding means you can access JavaScript code from Objective-C aand and Objective-C code from JavaScript without the overhead of a web browser.
+Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3 reasons:
+
+1. This gives developers direct access to JavaScript Bridge technology without leveraging 3rd party SDK’s such as Appcelerator, or Cordova (Phone Gap).
+2. JavaScript is the first non Apple proprietary language (Objective-C ) to be supported in the Native iOS XCode tool chain.
 3. It's very easy to get started.
 
 You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [apples developer network ] (https://developer.apple.com/wwdc/videos/?id=615 )
@@ -38,7 +38,7 @@ At a high level JavaScriptCore allows for wrapping of standard JavaScript object
 
 ## Overview of the JavaScriptCore API
 
-The goals of the JavaScript bridge API according to Apple are to provide: Automatic, Safe and high fidelity use of JavaScript.  Three main classes that iOS developers can use to compose heterogenous language native applications are JSVirtualMachine, [JSContext](https://developer.apple.com/library/mac/documentation/JavaScriptCore/Reference/JSContextRef_header_reference/Reference/reference.html#//apple_ref/doc/uid/TP40011494) and JSValue.
+The goals of the JavaScript bridge API according to Apple are to provide: Automatic, Safe and high fidelity use of JavaScript.  Three main classes that iOS developers can use to compose heterogeneous language native applications are JSVirtualMachine, [JSContext](https://developer.apple.com/library/mac/documentation/JavaScriptCore/Reference/JSContextRef_header_reference/Reference/reference.html#//apple_ref/doc/uid/TP40011494) and JSValue.
 
 ###JSVirtualMachine
 the JSVirtualMachine class is a Light weight single thread JavaScript virtual machine.  Your app can instantiate multiple JS virtual machines in your app to support multithreading.
