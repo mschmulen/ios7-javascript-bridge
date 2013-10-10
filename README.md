@@ -32,13 +32,13 @@ Several other cross platform technology tools have been created over the years t
 - Even Zynga has a solution [jsbindings ] (https://github.com/zynga/jsbindings)
 - Additional companies such as Xamarin and Ruby Motion do the same for C# and Ruby languages.  
 
-Apples iOS7 support of JavaScript inline with your Objective-C code validates JavaScript as the leading ( and only ) non proprietary language that is supported within the iOS development environment by the device manufacturer.
+Apple's iOS7 support of JavaScript inline with your Objective-C code validates JavaScript as the leading (and only) non proprietary language that is supported within the iOS development environment by the device manufacturer.
 
 At a high level JavaScriptCore allows for wrapping of standard JavaScript objects into Objective-C (the code used for iOS apps) and also allowing JavaScript to interact with native iOS objects and code.
 
 ## Overview of the JavaScriptCore API
 
-The goals of the JavaScript bridge API according to Apple are to provide: Automatic, Safe and high fidelity use of JavaScript.  Three main classes that iOS developers can use to compose heterogeneous language native applications are JSVirtualMachine, [JSContext](https://developer.apple.com/library/mac/documentation/JavaScriptCore/Reference/JSContextRef_header_reference/Reference/reference.html#//apple_ref/doc/uid/TP40011494) and JSValue.
+According to Apple, the goal of the JavaScript bridge API is to provide automatic, safe and high fidelity use of JavaScript.  Three main classes that iOS developers can use to compose heterogeneous language native applications are JSVirtualMachine, [JSContext](https://developer.apple.com/library/mac/documentation/JavaScriptCore/Reference/JSContextRef_header_reference/Reference/reference.html#//apple_ref/doc/uid/TP40011494) and JSValue.
 
 ###JSVirtualMachine
 the JSVirtualMachine class is a Light weight single thread JavaScript virtual machine.  Your app can instantiate multiple JS virtual machines in your app to support multithreading.
@@ -49,42 +49,41 @@ Within any given JSVirtualMachine you can have an arbitrary number of JSContexts
 ###JSValue
 	Strong Reference to a Javascript Value associated with a specific JSContext ( StrongReferenced to the JSContext it is associated or instantiated with)
 
-A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) so you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, you can’t change the value of the variable a in JavaScript and expect your Objective-C JSValue to change. Each time a change is made, the value must be copied across the boundary of the two execution environments.
+A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, you can’t change the value of the variable a in JavaScript and expect your Objective-C JSValue to change. Each time a change is made, the value must be copied across the boundary of the two execution environments.
 
 JSValue automatically wraps many JavaScript value types, including language primitives and object types.  There are some additional helper methods for common use cases such as NSArray and NSDictionary.
 
-A listing of some of the supported objects that are automatically bridged for you:
-- Objective-C type => JavaScript type
-- id => Wrapper object 
-- Class => Constructor object
-- nil => undefined
-- NSNull => null
-- NSString => string
-- NSNumber => number, boolean
-- NSDictionary => Object object
-- NSArray => Array object
-- NSDate  => Date object
-- NSBlock => Function object
+A listing of some of the supported objects that are automatically bridged for you.
 
-### Simplest example
+Objective-C type => JavaScript type
+id => Wrapper object 
+Class => Constructor object
+nil => undefined
+NSNull => null
+NSString => string
+NSNumber => number, boolean
+NSDictionary => Object object
+NSArray => Array object
+NSDate  => Date object
+NSBlock => Function object
 
-Writing your first JavaScript is can be done in as little as 3 lines of code:
-1. Include the JavaScript Core Libraries
-2. Create a JavaScript context by allocating and initializing a new JSContext
-3. Evaluate your JavaScript script code in the JSContext with the evaluate message
+### Simple Execution
+
+Writing your first JavaScript is can be done in 2 lines of code:
+1. Create a JavaScript context by allocating and initializing a new JSContext.
+2. Evaluate your JavaScript script code in the JSContext with the evaluate message.
 
 ```objc
 //#import <JavaScriptCore/JavaScriptCore.h>
 
 JSContext *context = [[JSContext alloc] init];
 JSValue *result = [context evaluateScript:@"2 + 8"];
-
 NSLog(@"2 + 2 = %d", [result toInt32]);
 ```
 
 ### Objective-C → JavaScript
 
-Surfacing native Objective-C Objects is also very simple, check out the Source code example to see how to make your Objective-C functional blocks available to your JavaScript script.
+Surfacing native Objective-C Objects is also very simple. Check out the Source Code example to see how to make your Objective-C functional blocks available to your JavaScript script.
 
 `
 //execute factorial in native Obj-C , Logger(@"5! = %@", factorial(5) );
@@ -105,9 +104,9 @@ The example surfaces 3 native functions:
 
 You can also surface custom Objective-C objects with the JSExport protocol to make the entire object available in you JavaScript Context.[Calling Objective-C Methods From JavaScript] (https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/ObjCFromJavaScript.html)
 
-### Whats Next
+### Wrapping Up
 
-You can find detailed information regarding Memory Management, Threading and using JavaScriptCore with a WebView on the [Apple Developer portal] (https://developer.apple.com).
+You can find detailed information regarding (Memory Management) (Threading) and (Using JavaScriptCore with a WebView) at the Apple Developer documentation.
 
 The combination of JavaScript support in your native iOS client and the proliferation of JavaScript server technology Node.js makes for exciting opportunities in "asymmetric" JavaScript code re-use for your native iOS App, web client and of course backend Node.js server.
 
