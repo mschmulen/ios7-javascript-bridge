@@ -69,12 +69,9 @@ static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our
     
     //global variables
     self.context[@"version"] = @1;
-    //JSValue *aValue = self.context[@"a"]; double a = [aValue toDouble]; NSLog(@"%.0f", a);
     
     //global functions
     [self.context evaluateScript:@"var square = function(x) {return x*x;}"];
-    //JSValue *squareFunction = self.context[@"square"];
-    //NSLog(@" squareFunction %@", squareFunction);
 };
 
 - ( void) preLoadObjectiveCBlockFunctions
