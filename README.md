@@ -7,7 +7,7 @@ Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3
 2. JavaScript is the first non Apple proprietary language (Objective-C ) to be supported in the Native iOS XCode tool chain.
 3. It's very easy to get started.
 
-You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [apples developer network ] (https://developer.apple.com/wwdc/videos/?id=615 )
+You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [Apple's developer network] (https://developer.apple.com/wwdc/videos/?id=615 )
 
 ### Getting Started
 
