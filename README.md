@@ -106,7 +106,7 @@ You can also surface custom Objective-C objects with the JSExport protocol to ma
 
 ### Whats Next
 
-You can find detailed information regarding (Memory Management) (Threading) and (Using JavaScriptCore with a WebView) at the Apple Developer documentation.
+You can find detailed information regarding Memory Management, Threading and using JavaScriptCore with a WebView on the [Apple Developer portal] (https://developer.apple.com).
 
 The combination of JavaScript support in your native iOS client and the proliferation of JavaScript server technology Node.js makes for exciting opportunities in "asymmetric" JavaScript code re-use for your native iOS App, web client and of course backend Node.js server.
 
