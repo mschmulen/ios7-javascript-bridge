@@ -13,7 +13,8 @@ You can checkout the WWDC introduction "Integrating JavaScript into Native Apps"
 
 If you want to see the technology in action you can download the sample project here https://github.com/mschmulen/ios7-javascript-bridge , and run it on your iPad device simulator.
 
-![JavaScript on iOS7 in Action ][https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png]
+![Image](screenshots/image1.png?raw=true)
+
 
 You can change the JavaScript directly into the blue text field and select the "execute JavaScript code" button to run the code to see the technology in action.
 
