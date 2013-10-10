@@ -66,17 +66,19 @@ A listing of some of the supported objects that are automatically bridged for yo
 - NSDate  => Date object
 - NSBlock => Function object
 
-### Simple Execution
+### Simplest example
 
-Writing your first JavaScript is can be done in 2 lines of code:
-1. Create a JavaScript context by allocating and initializing a new JSContext
-2. Evaluate your JavaScript script code in the JSContext with the evaluate message
+Writing your first JavaScript is can be done in as little as 3 lines of code:
+1. Include the JavaScript Core Libraries
+2. Create a JavaScript context by allocating and initializing a new JSContext
+3. Evaluate your JavaScript script code in the JSContext with the evaluate message
 
 ```objc
 //#import <JavaScriptCore/JavaScriptCore.h>
 
 JSContext *context = [[JSContext alloc] init];
 JSValue *result = [context evaluateScript:@"2 + 8"];
+
 NSLog(@"2 + 2 = %d", [result toInt32]);
 ```
 
