@@ -1,5 +1,6 @@
 ## Intro to Apple's new iOS7 native JavaScript bridge
 
+![Image](screenshots/splash700x400.png?raw=true)
 
 Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3 reasons:
 
