@@ -41,6 +41,9 @@ static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our
     "{ \n"
     "   consoleLog( stringArray[i] );\n"
     "} \n"
+    "\n"
+    "var factorialResult = factorial( 6 ); \n"
+    "consoleLog( \"6! = \" + factorialResult ); \n"
     " \n"
     "consoleLog(\" Change the Color of this View \"); \n"
     "setBackgroundColor(); \n"
@@ -99,16 +102,6 @@ static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our
         UIColor *newColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
         [self.view setBackgroundColor: newColor ];
     };
-    
-    //advertiseAsiBeacon( "JavaScript Activated IBeacon", "1111B0A7-CC11-49C2-BCCA-B55A703CD111" );
-    self.context[@"advertiseAsiBeacon "] = ^(NSString *advertisementName, NSString *serviceID)
-    {
-        NSLog( @" advertisementName : %@", advertisementName );
-        NSLog( @" serviceID : %@", serviceID );
-        
-        [self.peripheralManager startAdvertising:@{CBAdvertisementDataLocalNameKey: ADVERTISEMENT_NAME, CBAdvertisementDataServiceUUIDsKey: @[[CBUUID UUIDWithString:SERVICE_ID]]}];
-    };
-    
 }
 
 - ( void) executeJavaScriptInCodeWindow

@@ -72,11 +72,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDl-vQ-kwG">
-                                <rect key="frame" x="20" y="554" width="253" height="176"/>
+                                <rect key="frame" x="20" y="554" width="400" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ9-OC-3Rr">
-                                        <rect key="frame" x="0.0" y="35" width="253" height="141"/>
+                                        <rect key="frame" x="0.0" y="35" width="400" height="141"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <string key="text">//execute factorial in native Obj-C , Logger(@"5! = %@", factorial(5) );
@@ -90,7 +90,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="factorial( )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-vJ-zQM">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="factorial( x )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-vJ-zQM">
                                         <rect key="frame" x="7" y="6" width="194" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,55 +101,25 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwP-jN-cRE">
-                                <rect key="frame" x="336" y="554" width="253" height="176"/>
+                                <rect key="frame" x="505" y="554" width="400" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1H-BQ-1F3">
-                                        <rect key="frame" x="0.0" y="35" width="253" height="141"/>
+                                        <rect key="frame" x="0.0" y="35" width="400" height="141"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <mutableString key="text">self.context[@"setBackgroundColor"] = ^()  // Logger(@"sum2 = %@", sum2(4,5)
+                                        <string key="text">self.context[@"setBackgroundColor"] = ^()  // Logger(@"sum2 = %@", sum2(4,5)
     {
         CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
         CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
         CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
         UIColor *newColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
         [self.view setBackgroundColor: newColor ];
-    };</mutableString>
+    };</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="setBackgroundColor( )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKR-gc-Gsk">
-                                        <rect key="frame" x="7" y="6" width="194" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-1Q-v6x">
-                                <rect key="frame" x="652" y="554" width="253" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-gU-MB8">
-                                        <rect key="frame" x="0.0" y="35" width="253" height="141"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <mutableString key="text">self.context[@"advertiseAsiBeacon "] = ^(NSString *advertisementName, NSString *serviceID)
-    {
-        //NSLog(@"Sending: %d / %d", self.sendDataIndex, self.dataToSend.length);
-        NSLog( @" advertisementName : %@", advertisementName );
-        NSLog( @" serviceID : %@", serviceID );
-        
-        [self.peripheralManager startAdvertising:@{CBAdvertisementDataLocalNameKey: ADVERTISEMENT_NAME,
-                                                   CBAdvertisementDataServiceUUIDsKey: @[[CBUUID UUIDWithString:SERVICE_ID]]}];
-    };</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="advertiseAsiBeacon( )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-d4-0JH">
                                         <rect key="frame" x="7" y="6" width="194" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

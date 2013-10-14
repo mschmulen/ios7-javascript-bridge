@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "javascriptIPad/ViewController.m"
-            timestampString = "403133287.66148"
+            timestampString = "403458054.545648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "-executeJavaScriptInCodeWindow"
-            landmarkType = "5">
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "@implementation ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "javascriptIPad/ViewController.m"
-            timestampString = "403133232.69871"
+            timestampString = "403458054.545648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-preLoadObjectiveCBlockFunctions"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "javascriptIPad/ViewController.m"
-            timestampString = "403133287.66148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-preLoadObjectiveCBlockFunctions"
             landmarkType = "5">
          </BreakpointContent>
