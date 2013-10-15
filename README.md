@@ -23,8 +23,21 @@ The Appcelerator community exploded and the number of ‘Powered by Titanium’ 
 
 Today Appcelerator is not alone in this Strategy.  Xamarin has an implementation that binds at the CLR level; giving C# developers the same benefits.  The popular gaming platform Unity provides similar access without needing to write native language apps. Node.js binds to the server with V8 runtime at the core LibUV libraries.
 
+Several other cross platform technology tools have been created over the years to provide similar functionality:
+
+- [Appcelerator's Titanium ]( http://www.appcelerator.com ) provides a very similar bridge technology to build Native iOS Apps with JavaScript
+- [Phone Gap's, Cordova]( http://cordova.apache.org ) popular hybrid bridge for using HTML views inside a native container
+- [ImpactJS]( http://cordova.apache.org ) is a game oriented javascript bridge configuration.
+- Even Zynga has a solution [jsbindings ] (https://github.com/zynga/jsbindings)
+- Additional companies such as [Xamarin Mono ](http://www.xamarin.com) and [Ruby Motion](http://www.rubymotion.com/) do the same for C# and Ruby languages.
+
+
+
 JavaScript Bridges are powerful, because they give developer communities access and the opportunity for code reuse.
 
+Apple's iOS7 is the first iOS operating system to officially support JavaScript as a mobile development language in Apples XCode tool chain.
+
+Apple's iOS7 support of JavaScript inline with your Objective-C code validates JavaScript as the leading (and only) non proprietary language that is supported within the iOS development environment by the device manufacturer.
 
 ### Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3 reasons
 
@@ -34,6 +47,7 @@ JavaScript Bridges are powerful, because they give developer communities access 
 
 You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [Apple's developer network] (https://developer.apple.com/wwdc/videos/?id=615 )
 
+At a high level JavaScriptCore allows for wrapping of standard JavaScript objects into Objective-C (the code used for iOS apps) and also allowing JavaScript to interact with native iOS objects and code.
 
 ### Getting Started
 
@@ -41,26 +55,9 @@ If you want to see the technology in action you can download the sample project 
 
 ![Image](screenshots/image1.png?raw=true)
 
-
 You can change the JavaScript directly into the blue text field and select the "execute JavaScript code" button to run the code to see the technology in action.
 
 The Sample Application preloads a UITextView with a JavaScript context and script and also adds some native Objective-C function blocks that you can call from within your JavaScript context.  You can edit the code in the app and execute your script on the device.
-
-### Overview
-
-iOS7 is the first iPhone and iPad operating system to officially support JavaScript as a mobile development language from Apples XCode tool chain.
-
-Several other cross platform technology tools have been created over the years to provide similar functionality:
-
-- [Appcelerator's Titanium ]( http://www.appcelerator.com ) provides a very similar bridge technology to build Native iOS Apps with JavaScript
-- [Phone Gap's, Cordova]( http://cordova.apache.org ) popular hybrid bridge for using HTML views inside a native container
-- [ImpactJS]( http://cordova.apache.org ) is a game oriented javascript bridge configuration.
-- Even Zynga has a solution [jsbindings ] (https://github.com/zynga/jsbindings)
-- Additional companies such as [Xamarin Mono ](http://www.xamarin.com) and [Ruby Motion](http://www.rubymotion.com/) do the same for C# and Ruby languages.  
-
-Apple's iOS7 support of JavaScript inline with your Objective-C code validates JavaScript as the leading (and only) non proprietary language that is supported within the iOS development environment by the device manufacturer.
-
-At a high level JavaScriptCore allows for wrapping of standard JavaScript objects into Objective-C (the code used for iOS apps) and also allowing JavaScript to interact with native iOS objects and code.
 
 ## Overview of the JavaScriptCore API
 
