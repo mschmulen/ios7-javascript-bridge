@@ -10,6 +10,28 @@ Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3
 
 You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [Apple's developer network] (https://developer.apple.com/wwdc/videos/?id=615 )
 
+### A Brief History of JavaScript Bridges in Mobile
+
+In 2009 Appcelerator's Titanium 0.8 Version moved from a 'Hybrid web container' based approach similar to PhoneGap (now Cordova) to full 'Native binding'. The underlying technology Appcelerator's 'Kroll' required Titanium developers to re-architect their code and remove HTML as the top-level implementation.  Developers wrote their app’s in pure JavaScript. The value to developers and Appcelerator is Titanium JavaScript applications running on iOS (Android was not released until later) could get nearly all of the benefits of applications written in native Objective-C without having to learn Objective-C.
+
+The technology strategy was a smashing success for the following reasons:
+
+-	Appcelerator did not redefine the native iPhone look and feel  
+
+Titanium Apps leveraged Apples native Human Interface Guideline ( HIG ).  The iPhones Look and Feel was a major differentiator and the first 'feature' a user saw when opening an app.  Look and feel was core to the iPhones success, and the applications that conformed. Since titanium controls and components matched nearly one for one with the equivalent iOS libraries ( ti.label = UILabel, ti.TableView = UITableView ) Titanium iOS apps were nearly indistinguishable from their native counterparts.
+
+-	The JavaScript Bridge strategy was then implemented on other mobile device's (Android soon followed originally leveraging Rhino and then later V8, and later Blackberry and Tizen). 
+
+This gave developers a unified open language to build applications with and opened the door for code-reuse across the 2 leading mobile platforms; without sacrificing features.
+
+- Extendable, since the bridge binding technology was open; developers could extend the platform and give access to additional features that Appcelerator did not support.   Such as access to CoreData or blueTooth;
+
+The Appcelerator community exploded and the number of ‘Powered by Titanium’ Apps proliferated.
+
+Today Appcelerator is not alone in this Strategy.  Xamarin has an implementation that binds at the CLR level; giving C# developers the same benefits.  The popular gaming platform Unity provides similar access without needing to write native language apps. Node.js binds to the server with V8 runtime at the core LibUV libraries.
+
+JavaScript Bridges are powerful, because they give developer communities access and the opportunity for code reuse.
+
 ### Getting Started
 
 If you want to see the technology in action you can download the sample project here https://github.com/mschmulen/ios7-javascript-bridge , and run it on your iPad device simulator.
