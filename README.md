@@ -5,33 +5,25 @@
 
 ### A Brief History of JavaScript Bridges in Mobile
 
-In 2009 Appcelerator's Titanium 0.8 Version moved from a 'Hybrid web container' based approach similar to PhoneGap (now Cordova) to full 'Native binding'. The underlying technology Appcelerator's 'Kroll' required Titanium developers to re-architect their code and remove HTML as the top-level implementation.  Developers wrote their app’s in pure JavaScript. The value to developers and Appcelerator is Titanium JavaScript applications running on iOS (Android was not released until later) could get nearly all of the benefits of applications written in native Objective-C without having to learn Objective-C.
+In 2009 [Appcelerator's Titanium ]( http://www.appcelerator.com ) 0.8 Version changed from a 'Hybrid web container' based approach similar to 
+[Phone Gap / Cordova]( http://cordova.apache.org ) 
+to full 'Native binding'. The change required Titanium developers to re-architect their code and remove HTML as the top-level implementation.  Developers wrote their app’s in pure JavaScript.  The value to developers and Appcelerator is Titanium JavaScript applications running on iOS ( and eventually Android) could get nearly all of the benefits of applications written in native Objective-C without having to learn Objective-C.
 
 The technology strategy was a smashing success for the following reasons:
 
--	Appcelerator did not redefine the native iPhone look and feel  
+- Appcelerator did not redefine the native iPhone look and feel  
 
-Titanium Apps leveraged Apples native Human Interface Guideline ( HIG ).  The iPhones Look and Feel was a major differentiator and the first 'feature' a user saw when opening an app.  Look and feel was core to the iPhones success, and the applications that conformed. Since titanium controls and components matched nearly one for one with the equivalent iOS libraries ( ti.label = UILabel, ti.TableView = UITableView ) Titanium iOS apps were nearly indistinguishable from their native counterparts.
+Titanium Apps leveraged Apples native Human Interface Guideline ( HIG ).  The iPhones Look and Feel was a major differentiator and the first 'feature' a user saw when opening the mobile app.  Look and feel was core to the iPhones success, and the applications that conformed to it.  Since Titanium controls and components matched nearly one for one with the equivalent iOS libraries ( ti.label = UILabel, ti.TableView = UITableView ) Titanium iOS apps were nearly indistinguishable from their native counterparts.
 
--	The JavaScript Bridge strategy was then implemented on other mobile device's (Android soon followed originally leveraging Rhino and then later V8, and later Blackberry and Tizen). 
+- The JavaScript Bridge strategy was then implemented on other mobile device's (Android soon followed originally leveraging Rhino and then later V8, and later Blackberry and Tizen). 
 
 This gave developers a unified open language to build applications with and opened the door for code-reuse across the 2 leading mobile platforms; without sacrificing features.
 
-- Extendable, since the bridge binding technology was open; developers could extend the platform and give access to additional features that Appcelerator did not support.   Such as access to CoreData or blueTooth;
+- Titanium SDK could be extended to support additional native features and components. Since the bridge binding technology was open; developers could extend the platform and give access to additional features that Appcelerator did not support, such as access to CoreData or BlueTooth;
 
 The Appcelerator community exploded and the number of ‘Powered by Titanium’ Apps proliferated.
 
-Today Appcelerator is not alone in this Strategy.  Xamarin has an implementation that binds at the CLR level; giving C# developers the same benefits.  The popular gaming platform Unity provides similar access without needing to write native language apps. Node.js binds to the server with V8 runtime at the core LibUV libraries.
-
-Several other cross platform technology tools have been created over the years to provide similar functionality:
-
-- [Appcelerator's Titanium ]( http://www.appcelerator.com ) provides a very similar bridge technology to build Native iOS Apps with JavaScript
-- [Phone Gap's, Cordova]( http://cordova.apache.org ) popular hybrid bridge for using HTML views inside a native container
-- [ImpactJS]( http://cordova.apache.org ) is a game oriented javascript bridge configuration.
-- Even Zynga has a solution [jsbindings ] (https://github.com/zynga/jsbindings)
-- Additional companies such as [Xamarin Mono ](http://www.xamarin.com) and [Ruby Motion](http://www.rubymotion.com/) do the same for C# and Ruby languages.
-
-
+Today Appcelerator is not alone in this Strategy.  [Xamarin Mono ](http://www.xamarin.com) has an implementation that binds at the CLR level; giving C# developers the same benefits.  [Ruby Motion](http://www.rubymotion.com/) does the same for Ruby developers.  The popular gaming platform Unity provides similar access without needing to write native language apps. Node.js binds to the server with V8 runtime at the core LibUV libraries.
 
 JavaScript Bridges are powerful, because they give developer communities access and the opportunity for code reuse.
 
