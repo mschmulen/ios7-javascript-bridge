@@ -62,7 +62,8 @@ the JSVirtualMachine class is a Light weight single thread JavaScript virtual ma
 Within any given JSVirtualMachine you can have an arbitrary number of JSContexts allowing you to execute JavaScript scripts and give access to global objects.
 
 ###JSValue
-	Strong Reference to a Javascript Value associated with a specific JSContext ( StrongReferenced to the JSContext it is associated or instantiated with)
+
+JSValue is a strong reference to a JavaScript value in a specific JS Context ( StrongReferenced to the JSContext it is associated or instantiated with)
 
 A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, you can’t change the value of the variable a in JavaScript and expect your Objective-C JSValue to change. Each time a change is made, the value must be copied across the boundary of the two execution environments.
 
