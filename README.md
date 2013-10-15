@@ -115,7 +115,6 @@ The example surfaces 3 native functions:
 - consoleLog
 - factorial
 - setBackgroundColor
-- advertiseAsiBeacon
 
 You can also surface custom Objective-C objects with the JSExport protocol to make the entire object available in you JavaScript Context.[Calling Objective-C Methods From JavaScript] (https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/ObjCFromJavaScript.html)
 
