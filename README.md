@@ -2,13 +2,6 @@
 
 ![Image](screenshots/splash700x400.png?raw=true)
 
-Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3 reasons:
-
-1. Gives developers direct access to JavaScript Bridge technology without leveraging 3rd party SDK’s such as Appcelerator, or Cordova (Phone Gap).
-2. JavaScript is the first non Apple proprietary language (Objective-C ) to be supported in the Native iOS XCode tool chain.
-3. It's easy to get started, and composites well with Objective-C language apps.
-
-You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [Apple's developer network] (https://developer.apple.com/wwdc/videos/?id=615 )
 
 ### A Brief History of JavaScript Bridges in Mobile
 
@@ -31,6 +24,16 @@ The Appcelerator community exploded and the number of ‘Powered by Titanium’ 
 Today Appcelerator is not alone in this Strategy.  Xamarin has an implementation that binds at the CLR level; giving C# developers the same benefits.  The popular gaming platform Unity provides similar access without needing to write native language apps. Node.js binds to the server with V8 runtime at the core LibUV libraries.
 
 JavaScript Bridges are powerful, because they give developer communities access and the opportunity for code reuse.
+
+
+### Apple Support for a Native iOS Objective-C to JavaScript bridge is amazing for 3 reasons
+
+1. Gives developers direct access to JavaScript Bridge technology without leveraging 3rd party SDK’s such as Appcelerator, or Cordova (Phone Gap).
+2. JavaScript is the first non Apple proprietary language (Objective-C ) to be supported in the Native iOS XCode tool chain.
+3. It's easy to get started, and composites well with Objective-C language apps.
+
+You can checkout the WWDC introduction "Integrating JavaScript into Native Apps" session on [Apple's developer network] (https://developer.apple.com/wwdc/videos/?id=615 )
+
 
 ### Getting Started
 
