@@ -56,7 +56,7 @@ The Sample Application preloads a UITextView with a JavaScript context and scrip
 According to Apple, the goal of the JavaScript bridge API is to provide automatic, safe and high fidelity use of JavaScript.  Three main classes that iOS developers can use to compose heterogeneous language native applications are JSVirtualMachine, [JSContext](https://developer.apple.com/library/mac/documentation/JavaScriptCore/Reference/JSContextRef_header_reference/Reference/reference.html#//apple_ref/doc/uid/TP40011494) and JSValue.
 
 ###JSVirtualMachine
-the JSVirtualMachine class is a Light weight single thread JavaScript virtual machine.  Your app can instantiate multiple JS virtual machines in your app to support multithreading.
+The JSVirtualMachine class is a Light weight single thread JavaScript virtual machine.  Your app can instantiate multiple JS virtual machines in your app to support multithreading.
 
 ###JSContext
 Within any given JSVirtualMachine you can have an arbitrary number of JSContexts allowing you to execute JavaScript scripts and give access to global objects.
@@ -65,7 +65,7 @@ Within any given JSVirtualMachine you can have an arbitrary number of JSContexts
 
 JSValue is a strong reference to a JavaScript value in a specific JS Context ( StrongReferenced to the JSContext it is associated or instantiated with)
 
-A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, you can’t change the value of the variable a in JavaScript and expect your Objective-C JSValue to change. Each time a change is made, the value must be copied across the boundary of the two execution environments.
+A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, changes to Objective-C values in JavaScript must be copied across the bridge boundry of the two execution environments.
 
 JSValue automatically wraps many JavaScript value types, including language primitives and object types.  There are some additional helper methods for common use cases such as NSArray and NSDictionary.
 
@@ -101,7 +101,7 @@ NSLog(@"2 + 2 = %d", [result toInt32]);
 
 Surfacing native Objective-C Objects is also very simple. Check out the Source Code example to see how to make your Objective-C functional blocks available to your JavaScript script.
 
-`
+```objc
 //execute factorial in native Obj-C , Logger(@"5! = %@", factorial(5) );
     self.context[@"factorial"] = ^(int x) {
         int factorial = 1;
@@ -110,12 +110,12 @@ Surfacing native Objective-C Objects is also very simple. Check out the Source C
         }
         return factorial;
     };
-`
+```
 
-The example surfaces 3 native functions:
-- consoleLog
-- factorial
-- setBackgroundColor
+The (JavaScript iPad example)[https://github.com/mschmulen/ios7-javascript-bridge/tree/master/javascript-bridge-iPad] surfaces 3 native functions:
+- (consoleLog)[https://github.com/mschmulen/ios7-javascript-bridge/blob/master/javascript-bridge-iPad/javascriptIPad/ViewController.m#L83]
+- (factorial)[https://github.com/mschmulen/ios7-javascript-bridge/blob/master/javascript-bridge-iPad/javascriptIPad/ViewController.m#L88]
+- (setBackgroundColor)[https://github.com/mschmulen/ios7-javascript-bridge/blob/master/javascript-bridge-iPad/javascriptIPad/ViewController.m#L97]
 
 You can also surface custom Objective-C objects with the JSExport protocol to make the entire object available in you JavaScript Context.[Calling Objective-C Methods From JavaScript] (https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/ObjCFromJavaScript.html)
 
