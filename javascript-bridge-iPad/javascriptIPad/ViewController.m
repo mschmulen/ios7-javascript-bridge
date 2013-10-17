@@ -20,6 +20,9 @@
 //Current Context
 @property (strong, nonatomic) JSContext *context;
 
+//Current javaScriptCode
+@property NSString *javaScriptCode;
+
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCommandTerminal;
 
 //Core BlueTooth properties
@@ -34,24 +37,6 @@
 
 @implementation ViewController
 
-static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our Native App ! \"); \n"
-    " \n"
-    "var stringArray = [\"Hello\",\"Objective-C\", \"Welcome\", \"JavaScript\"]; \n"
-    "for (i=0;i< stringArray.length;i++) \n"
-    "{ \n"
-    "   consoleLog( stringArray[i] );\n"
-    "} \n"
-    "\n"
-    "var factorialResult = factorial( 6 ); \n"
-    "consoleLog( \"6! = \" + factorialResult ); \n"
-    " \n"
-    "consoleLog(\" Change the Color of this View \"); \n"
-    "setBackgroundColor(); \n"
-    " \n";
-    //"consoleLog(Lets run some JavaScript in our Native App ! \"); \n"
-    //"advertiseAsiBeacon(\"JavaScriptiBeacon\",\"2145B0A7-CC2E-49C2-BCCA-B55A703CD030\"); \n"
-    //" \n";
-
 - (JSContext *) context
 {
     if ( !_context) _context = [[JSContext alloc] init];
@@ -60,10 +45,43 @@ static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our
 
 - (void) logger:(NSString *)logMessage
 {
-    
     NSLog(logMessage);
     
     [self.textViewJavascriptConsoleOut setText: [NSString stringWithFormat: @"%@\n%@", logMessage, self.textViewJavascriptConsoleOut.text] ];
+}
+
+- (NSString *) loadJavaScriptCodeFromFile
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"simple" ofType:@"js"];
+    NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    return jsCode;
+}
+
+- ( NSString * ) javaScriptCode
+{
+    if ( !_javaScriptCode )
+    {
+        /*
+        _javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our Native App ! \"); \n"
+                                        " \n"
+                                        "var stringArray = [\"Hello\",\"Objective-C\", \"Welcome\", \"JavaScript\"]; \n"
+                                        "for (i=0;i< stringArray.length;i++) \n"
+                                        "{ \n"
+                                        "   consoleLog( stringArray[i] );\n"
+                                        "} \n"
+                                        "\n"
+                                        "var factorialResult = factorial( 6 ); \n"
+                                        "consoleLog( \"6! = \" + factorialResult ); \n"
+                                        " \n"
+                                        "consoleLog(\" Change the Color of this View \"); \n"
+                                        "setBackgroundColor(); \n"
+                                        " \n";
+        */
+        _javaScriptCode = [self loadJavaScriptCodeFromFile];
+        
+    }
+    return _javaScriptCode;
 }
 
 - ( void) preLoadJavaScriptGlobalScopeVariablesAndFunctions
@@ -193,7 +211,7 @@ static NSString *javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our
     [super viewDidLoad];
     
     [self resetScriptContext];
-    [[self textViewJavaScriptCode] setText: javaScriptCode];
+    [[self textViewJavaScriptCode] setText: [self javaScriptCode]];
     
 }
 

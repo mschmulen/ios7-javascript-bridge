@@ -21,6 +21,8 @@
 		AE6B636717FC897500D3140E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B634917FC897500D3140E /* UIKit.framework */; };
 		AE6B636F17FC897500D3140E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE6B636D17FC897500D3140E /* InfoPlist.strings */; };
 		AE6B637117FC897500D3140E /* javascriptIPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B637017FC897500D3140E /* javascriptIPadTests.m */; };
+		AEB6BFF2180F6F81007AE999 /* intro.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
+		AEB6BFF3180F71A3007AE999 /* intro.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		AE6B636C17FC897500D3140E /* javascriptIPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "javascriptIPadTests-Info.plist"; sourceTree = "<group>"; };
 		AE6B636E17FC897500D3140E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6B637017FC897500D3140E /* javascriptIPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = javascriptIPadTests.m; sourceTree = "<group>"; };
+		AEB6BFF1180F6F81007AE999 /* intro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = intro.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 				AE6B635B17FC897500D3140E /* ViewController.m */,
 				AE6B635D17FC897500D3140E /* Images.xcassets */,
 				AE6B634C17FC897500D3140E /* Supporting Files */,
+				AEB6BFF1180F6F81007AE999 /* intro.js */,
 			);
 			path = javascriptIPad;
 			sourceTree = "<group>";
@@ -228,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB6BFF3180F71A3007AE999 /* intro.js in Resources */,
 				AE6B635E17FC897500D3140E /* Images.xcassets in Resources */,
 				AE6B635017FC897500D3140E /* InfoPlist.strings in Resources */,
 				AE6B635917FC897500D3140E /* Main.storyboard in Resources */,
@@ -251,6 +256,7 @@
 			files = (
 				AE6B635C17FC897500D3140E /* ViewController.m in Sources */,
 				AE6B635617FC897500D3140E /* AppDelegate.m in Sources */,
+				AEB6BFF2180F6F81007AE999 /* intro.js in Sources */,
 				AE6B635217FC897500D3140E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
