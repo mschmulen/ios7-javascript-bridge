@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4CD2421811E68700B326D8 /* JavaScriptCodeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD2411811E68700B326D8 /* JavaScriptCodeBlock.m */; };
+		AE4CD2441811F51300B326D8 /* filter.js in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD2431811F51300B326D8 /* filter.js */; };
+		AE4CD2461811F51E00B326D8 /* filterMap.js in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD2451811F51E00B326D8 /* filterMap.js */; };
+		AE4CD2481811F52B00B326D8 /* filterMapReduce.js in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD2471811F52B00B326D8 /* filterMapReduce.js */; };
+		AE4CD2491811F56500B326D8 /* filter.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4CD2431811F51300B326D8 /* filter.js */; };
+		AE4CD24A1811F56500B326D8 /* filterMap.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4CD2451811F51E00B326D8 /* filterMap.js */; };
+		AE4CD24B1811F56500B326D8 /* filterMapReduce.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4CD2471811F52B00B326D8 /* filterMapReduce.js */; };
+		AE4CD24D1811F62900B326D8 /* map.js in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD24C1811F62900B326D8 /* map.js */; };
+		AE4CD24E1811F7C300B326D8 /* map.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4CD24C1811F62900B326D8 /* map.js */; };
+		AE4CD2501812028900B326D8 /* reduce.js in Sources */ = {isa = PBXBuildFile; fileRef = AE4CD24F1812028900B326D8 /* reduce.js */; };
+		AE4CD2511812029400B326D8 /* reduce.js in Resources */ = {isa = PBXBuildFile; fileRef = AE4CD24F1812028900B326D8 /* reduce.js */; };
 		AE6B634617FC897500D3140E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B634517FC897500D3140E /* Foundation.framework */; };
 		AE6B634817FC897500D3140E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B634717FC897500D3140E /* CoreGraphics.framework */; };
 		AE6B634A17FC897500D3140E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B634917FC897500D3140E /* UIKit.framework */; };
@@ -23,6 +34,20 @@
 		AE6B637117FC897500D3140E /* javascriptIPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B637017FC897500D3140E /* javascriptIPadTests.m */; };
 		AEB6BFF2180F6F81007AE999 /* intro.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
 		AEB6BFF3180F71A3007AE999 /* intro.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
+		AEB6BFF6180F74DC007AE999 /* sortBubble.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF5180F74DC007AE999 /* sortBubble.js */; };
+		AEB6BFF8180F74E4007AE999 /* λ.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF7180F74E4007AE999 /* λ.js */; };
+		AEB6BFFA180F74FB007AE999 /* sortMerge.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF9180F74FB007AE999 /* sortMerge.js */; };
+		AEB6BFFC180F7509007AE999 /* sortInsertion.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFFB180F7509007AE999 /* sortInsertion.js */; };
+		AEB6BFFE180F7513007AE999 /* sortSelection.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFFD180F7513007AE999 /* sortSelection.js */; };
+		AEB6C000180F75A1007AE999 /* dataStructureBinaryTree.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */; };
+		AEB6C002180F75B6007AE999 /* dataStructureHeap.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6C001180F75B6007AE999 /* dataStructureHeap.js */; };
+		AEB6C003180F76E8007AE999 /* sortBubble.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF5180F74DC007AE999 /* sortBubble.js */; };
+		AEB6C004180F76E8007AE999 /* λ.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF7180F74E4007AE999 /* λ.js */; };
+		AEB6C005180F76E8007AE999 /* sortMerge.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF9180F74FB007AE999 /* sortMerge.js */; };
+		AEB6C006180F76E8007AE999 /* sortInsertion.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFFB180F7509007AE999 /* sortInsertion.js */; };
+		AEB6C007180F76E8007AE999 /* sortSelection.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFFD180F7513007AE999 /* sortSelection.js */; };
+		AEB6C008180F76E8007AE999 /* dataStructureBinaryTree.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */; };
+		AEB6C009180F76E8007AE999 /* dataStructureHeap.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6C001180F75B6007AE999 /* dataStructureHeap.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE4CD2401811E68700B326D8 /* JavaScriptCodeBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptCodeBlock.h; sourceTree = "<group>"; };
+		AE4CD2411811E68700B326D8 /* JavaScriptCodeBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCodeBlock.m; sourceTree = "<group>"; };
+		AE4CD2431811F51300B326D8 /* filter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filter.js; sourceTree = "<group>"; };
+		AE4CD2451811F51E00B326D8 /* filterMap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filterMap.js; sourceTree = "<group>"; };
+		AE4CD2471811F52B00B326D8 /* filterMapReduce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = filterMapReduce.js; sourceTree = "<group>"; };
+		AE4CD24C1811F62900B326D8 /* map.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = map.js; sourceTree = "<group>"; };
+		AE4CD24F1812028900B326D8 /* reduce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = reduce.js; sourceTree = "<group>"; };
 		AE6B634217FC897500D3140E /* javascriptIPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = javascriptIPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6B634517FC897500D3140E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE6B634717FC897500D3140E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +88,13 @@
 		AE6B636E17FC897500D3140E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6B637017FC897500D3140E /* javascriptIPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = javascriptIPadTests.m; sourceTree = "<group>"; };
 		AEB6BFF1180F6F81007AE999 /* intro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = intro.js; sourceTree = "<group>"; };
+		AEB6BFF5180F74DC007AE999 /* sortBubble.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortBubble.js; sourceTree = "<group>"; };
+		AEB6BFF7180F74E4007AE999 /* λ.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "λ.js"; sourceTree = "<group>"; };
+		AEB6BFF9180F74FB007AE999 /* sortMerge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortMerge.js; sourceTree = "<group>"; };
+		AEB6BFFB180F7509007AE999 /* sortInsertion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortInsertion.js; sourceTree = "<group>"; };
+		AEB6BFFD180F7513007AE999 /* sortSelection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortSelection.js; sourceTree = "<group>"; };
+		AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dataStructureBinaryTree.js; sourceTree = "<group>"; };
+		AEB6C001180F75B6007AE999 /* dataStructureHeap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dataStructureHeap.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +154,28 @@
 		AE6B634B17FC897500D3140E /* javascriptIPad */ = {
 			isa = PBXGroup;
 			children = (
+				AE6B635B17FC897500D3140E /* ViewController.m */,
+				AE6B635717FC897500D3140E /* Main.storyboard */,
 				AE6B635417FC897500D3140E /* AppDelegate.h */,
 				AE6B635517FC897500D3140E /* AppDelegate.m */,
-				AE6B635717FC897500D3140E /* Main.storyboard */,
 				AE6B635A17FC897500D3140E /* ViewController.h */,
-				AE6B635B17FC897500D3140E /* ViewController.m */,
+				AE4CD2401811E68700B326D8 /* JavaScriptCodeBlock.h */,
+				AE4CD2411811E68700B326D8 /* JavaScriptCodeBlock.m */,
 				AE6B635D17FC897500D3140E /* Images.xcassets */,
 				AE6B634C17FC897500D3140E /* Supporting Files */,
 				AEB6BFF1180F6F81007AE999 /* intro.js */,
+				AE4CD2431811F51300B326D8 /* filter.js */,
+				AE4CD24C1811F62900B326D8 /* map.js */,
+				AE4CD2451811F51E00B326D8 /* filterMap.js */,
+				AE4CD24F1812028900B326D8 /* reduce.js */,
+				AE4CD2471811F52B00B326D8 /* filterMapReduce.js */,
+				AEB6BFF5180F74DC007AE999 /* sortBubble.js */,
+				AEB6BFF7180F74E4007AE999 /* λ.js */,
+				AEB6BFF9180F74FB007AE999 /* sortMerge.js */,
+				AEB6BFFB180F7509007AE999 /* sortInsertion.js */,
+				AEB6BFFD180F7513007AE999 /* sortSelection.js */,
+				AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */,
+				AEB6C001180F75B6007AE999 /* dataStructureHeap.js */,
 			);
 			path = javascriptIPad;
 			sourceTree = "<group>";
@@ -203,6 +256,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matt Schmulen";
 				TargetAttributes = {
+					AE6B634117FC897500D3140E = {
+						DevelopmentTeam = GVE69PZWG4;
+					};
 					AE6B636217FC897500D3140E = {
 						TestTargetID = AE6B634117FC897500D3140E;
 					};
@@ -232,6 +288,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4CD2511812029400B326D8 /* reduce.js in Resources */,
+				AE4CD24E1811F7C300B326D8 /* map.js in Resources */,
+				AE4CD2491811F56500B326D8 /* filter.js in Resources */,
+				AE4CD24A1811F56500B326D8 /* filterMap.js in Resources */,
+				AE4CD24B1811F56500B326D8 /* filterMapReduce.js in Resources */,
+				AEB6C003180F76E8007AE999 /* sortBubble.js in Resources */,
+				AEB6C004180F76E8007AE999 /* λ.js in Resources */,
+				AEB6C005180F76E8007AE999 /* sortMerge.js in Resources */,
+				AEB6C006180F76E8007AE999 /* sortInsertion.js in Resources */,
+				AEB6C007180F76E8007AE999 /* sortSelection.js in Resources */,
+				AEB6C008180F76E8007AE999 /* dataStructureBinaryTree.js in Resources */,
+				AEB6C009180F76E8007AE999 /* dataStructureHeap.js in Resources */,
 				AEB6BFF3180F71A3007AE999 /* intro.js in Resources */,
 				AE6B635E17FC897500D3140E /* Images.xcassets in Resources */,
 				AE6B635017FC897500D3140E /* InfoPlist.strings in Resources */,
@@ -254,10 +322,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4CD2501812028900B326D8 /* reduce.js in Sources */,
 				AE6B635C17FC897500D3140E /* ViewController.m in Sources */,
 				AE6B635617FC897500D3140E /* AppDelegate.m in Sources */,
 				AEB6BFF2180F6F81007AE999 /* intro.js in Sources */,
+				AEB6BFF6180F74DC007AE999 /* sortBubble.js in Sources */,
+				AEB6BFF8180F74E4007AE999 /* λ.js in Sources */,
+				AE4CD2441811F51300B326D8 /* filter.js in Sources */,
 				AE6B635217FC897500D3140E /* main.m in Sources */,
+				AEB6C002180F75B6007AE999 /* dataStructureHeap.js in Sources */,
+				AEB6BFFC180F7509007AE999 /* sortInsertion.js in Sources */,
+				AEB6BFFA180F74FB007AE999 /* sortMerge.js in Sources */,
+				AE4CD2481811F52B00B326D8 /* filterMapReduce.js in Sources */,
+				AE4CD2421811E68700B326D8 /* JavaScriptCodeBlock.m in Sources */,
+				AEB6BFFE180F7513007AE999 /* sortSelection.js in Sources */,
+				AEB6C000180F75A1007AE999 /* dataStructureBinaryTree.js in Sources */,
+				AE4CD2461811F51E00B326D8 /* filterMap.js in Sources */,
+				AE4CD24D1811F62900B326D8 /* map.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "javascriptIPad/javascriptIPad-Prefix.pch";
 				INFOPLIST_FILE = "javascriptIPad/javascriptIPad-Info.plist";
@@ -399,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "javascriptIPad/javascriptIPad-Prefix.pch";
 				INFOPLIST_FILE = "javascriptIPad/javascriptIPad-Info.plist";

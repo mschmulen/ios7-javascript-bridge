@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JavaScriptCodeBlock.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 #import <CoreLocation/CoreLocation.h>
@@ -14,14 +15,17 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableViewJavaScriptCodeBlocks;
 @property (weak, nonatomic) IBOutlet UITextView *textViewJavaScriptCode;
 @property (weak, nonatomic) IBOutlet UITextView *textViewJavascriptConsoleOut;
+
+@property ( strong, nonatomic) NSMutableArray *tableData;
 
 //Current Context
 @property (strong, nonatomic) JSContext *context;
 
 //Current javaScriptCode
-@property NSString *javaScriptCode;
+@property (strong, nonatomic) JavaScriptCodeBlock *currentJavaScriptCode;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCommandTerminal;
 
@@ -37,6 +41,84 @@
 
 @implementation ViewController
 
+- (NSMutableArray *) tableData
+{
+    if ( !_tableData){
+        
+        _tableData = [[NSMutableArray alloc] init];
+        
+        JavaScriptCodeBlock *blockIntro = [JavaScriptCodeBlock alloc];
+        blockIntro.name = @"intro";
+        blockIntro.javaScriptSourceFile = @"intro";
+        [_tableData addObject:blockIntro];
+        
+        JavaScriptCodeBlock *blockFilter = [JavaScriptCodeBlock alloc];
+        blockFilter.name = @"filter";
+        blockFilter.javaScriptSourceFile = @"filter";
+        [_tableData addObject:blockFilter];
+        
+        JavaScriptCodeBlock *blockMap = [JavaScriptCodeBlock alloc];
+        blockMap.name = @"map";
+        blockMap.javaScriptSourceFile = @"map";
+        [_tableData addObject:blockMap];
+        
+        JavaScriptCodeBlock *blogFilterMap = [JavaScriptCodeBlock alloc];
+        blogFilterMap.name = @"filter + map";
+        blogFilterMap.javaScriptSourceFile = @"filterMap";
+        [_tableData addObject:blogFilterMap];
+       
+        JavaScriptCodeBlock *blockReduce = [JavaScriptCodeBlock alloc];
+        blockReduce.name = @"reduce";
+        blockReduce.javaScriptSourceFile = @"reduce";
+        [_tableData addObject:blockReduce];
+        
+        JavaScriptCodeBlock *blockFilterMapReduce = [JavaScriptCodeBlock alloc];
+        blockFilterMapReduce.name = @"filter + map + reduce";
+        blockFilterMapReduce.javaScriptSourceFile = @"filterMapReduce";
+        [_tableData addObject:blockFilterMapReduce];
+        
+        /*
+        JavaScriptCodeBlock *block2 = [JavaScriptCodeBlock alloc];
+        block2.name = @"sortBubble";
+        block2.javaScriptSourceFile = @"sortBubble";
+        [_tableData addObject:block2];
+        
+        JavaScriptCodeBlock *block3 = [JavaScriptCodeBlock alloc];
+        block3.name = @"sortMerge";
+        block3.javaScriptSourceFile = @"sortMerge";
+        [_tableData addObject:block3];
+        
+        JavaScriptCodeBlock *block4 = [JavaScriptCodeBlock alloc];
+        block3.name = @"insertion sort";
+        block3.javaScriptSourceFile = @"sortInsertion";
+        [_tableData addObject:block4];
+
+        JavaScriptCodeBlock *block5 = [JavaScriptCodeBlock alloc];
+        block3.name = @"selection sort";
+        block3.javaScriptSourceFile = @"sortSelection";
+        [_tableData addObject:block5];
+        
+        JavaScriptCodeBlock *block6 = [JavaScriptCodeBlock alloc];
+        block3.name = @"binary tree";
+        block3.javaScriptSourceFile = @"dataStructureBinaryTree";
+        [_tableData addObject:block6];
+
+        JavaScriptCodeBlock *block7 = [JavaScriptCodeBlock alloc];
+        block3.name = @"heap";
+        block3.javaScriptSourceFile = @"dataStructureHeap";
+        [_tableData addObject:block7];
+        
+        JavaScriptCodeBlock *blockλ = [JavaScriptCodeBlock alloc];
+        block.name = @"λ";
+        block3.javaScriptSourceFile = @"λ";
+        [_tableData addObject:block];
+         */
+        
+    }
+    return _tableData;
+};
+
+
 - (JSContext *) context
 {
     if ( !_context) _context = [[JSContext alloc] init];
@@ -45,43 +127,27 @@
 
 - (void) logger:(NSString *)logMessage
 {
-    NSLog(logMessage);
+    //NSLog(logMessage);
+    [self.textViewJavascriptConsoleOut setText: [NSString stringWithFormat: @"%@\n%@", self.textViewJavascriptConsoleOut.text, logMessage] ];
     
-    [self.textViewJavascriptConsoleOut setText: [NSString stringWithFormat: @"%@\n%@", logMessage, self.textViewJavascriptConsoleOut.text] ];
+    //set the console out to the bottom of the view
+    //CGRect caretRect = [self.textViewJavascriptConsoleOut caretRectForPosition:self.textViewJavascriptConsoleOut.endOfDocument];
+    //[self.textViewJavascriptConsoleOut scrollRectToVisible:caretRect animated:YES];
 }
 
-- (NSString *) loadJavaScriptCodeFromFile
+- (NSString *) loadCurrentJavaScriptCodeFromFile
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"simple" ofType:@"js"];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.currentJavaScriptCode.javaScriptSourceFile ofType:@"js"];
     NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
+    
+    //set the text in the view
+    [[self textViewJavaScriptCode] setText: jsCode ];
+    //clear the consoleOut
+    self.textViewJavascriptConsoleOut.text = @"";
+    
     return jsCode;
-}
-
-- ( NSString * ) javaScriptCode
-{
-    if ( !_javaScriptCode )
-    {
-        /*
-        _javaScriptCode = @"consoleLog(\"Lets run some JavaScript in our Native App ! \"); \n"
-                                        " \n"
-                                        "var stringArray = [\"Hello\",\"Objective-C\", \"Welcome\", \"JavaScript\"]; \n"
-                                        "for (i=0;i< stringArray.length;i++) \n"
-                                        "{ \n"
-                                        "   consoleLog( stringArray[i] );\n"
-                                        "} \n"
-                                        "\n"
-                                        "var factorialResult = factorial( 6 ); \n"
-                                        "consoleLog( \"6! = \" + factorialResult ); \n"
-                                        " \n"
-                                        "consoleLog(\" Change the Color of this View \"); \n"
-                                        "setBackgroundColor(); \n"
-                                        " \n";
-        */
-        _javaScriptCode = [self loadJavaScriptCodeFromFile];
-        
-    }
-    return _javaScriptCode;
 }
 
 - ( void) preLoadJavaScriptGlobalScopeVariablesAndFunctions
@@ -122,10 +188,14 @@
     };
 }
 
-- ( void) executeJavaScriptInCodeWindow
+- ( void) evaluateJavaScriptInCodeWindow
 {
     JSValue * value = [self.context evaluateScript: [[self textViewJavaScriptCode] text]];
     //[self logger: [ NSString stringWithFormat:@"JavaScript context return value : %@", value] ];
+    
+    //set the console out to the bottom of the view
+    CGRect caretRect = [self.textViewJavascriptConsoleOut caretRectForPosition:self.textViewJavascriptConsoleOut.endOfDocument];
+    [self.textViewJavascriptConsoleOut scrollRectToVisible:caretRect animated:YES];
 }
 
 - ( void ) resetScriptContext
@@ -156,15 +226,11 @@
 }
 
 - (IBAction)actionClearConsoleOut:(id)sender {
-    
-   //[[[self textViewJavascriptConsoleOut] text] initWithString:@"..."];
    self.textViewJavascriptConsoleOut.text = @"";
 }
 
 - (IBAction)actionExecute:(id)sender {
-
-    //[self loadJavaScriptContextAndCode];
-    [self executeJavaScriptInCodeWindow];
+    [self evaluateJavaScriptInCodeWindow];
 }
 
 // BLE Stuff
@@ -205,14 +271,53 @@
 }
 
 
+// UITableView methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.tableData count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ( [[ [self.tableData objectAtIndex:indexPath.row] class] isSubclassOfClass:[JavaScriptCodeBlock class]])
+    {
+        JavaScriptCodeBlock *model = (JavaScriptCodeBlock *)[self.tableData objectAtIndex:indexPath.row];
+        self.currentJavaScriptCode = model;
+        
+        [self loadCurrentJavaScriptCodeFromFile];
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    if ( [[ [self.tableData objectAtIndex:indexPath.row] class] isSubclassOfClass:[JavaScriptCodeBlock class]])
+    {
+        JavaScriptCodeBlock *model = (JavaScriptCodeBlock *)[self.tableData objectAtIndex:indexPath.row];
+        cell.textLabel.text = model.name;
+    }
+    return cell;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self resetScriptContext];
-    [[self textViewJavaScriptCode] setText: [self javaScriptCode]];
     
+    self.currentJavaScriptCode = [self.tableData objectAtIndex:0];
+    
+    //turn of Auto Correct
+    [[self textViewJavaScriptCode] setAutocorrectionType:UITextAutocorrectionTypeNo];
+    
+    [self loadCurrentJavaScriptCodeFromFile];
 }
 
 - (void)didReceiveMemoryWarning

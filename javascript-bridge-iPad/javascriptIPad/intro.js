@@ -1,16 +1,21 @@
-consoleLog("Lets run some JavaScript in our Native App ! ");
+consoleLog("iOS7 supports JavaScript in our Native App !");
 
-consoleLog("How about a simple JavaScript Algorithm ");
-
-var stringArray = ["Hello","Objective-C", "Welcome", "JavaScript"];
+var stringArray = ["Hello","JavaScript", "From", "iOS7"];
 for (i=0;i< stringArray.length;i++)
 {
     consoleLog( stringArray[i] );
 }
 
+consoleLog("JavaScript code can call Native Objective-C methods ");
+
+consoleLog("3 Obj-C methods have been made available in this JavaScript Context");
+
+consoleLog(" 'consoleLog(string)' ");
+consoleLog(" 'factorial(number)' ");
+consoleLog(" 'setBackgroundColor(number)' ");
+
 var factorialResult = factorial( 6 );
 consoleLog( "6! = " + factorialResult );
 
-
-consoleLog(" Change the Color of this View ");
+consoleLog(" 'setBackgroundColor' will change the view background ");
 setBackgroundColor();
