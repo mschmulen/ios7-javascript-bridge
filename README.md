@@ -85,7 +85,7 @@ A listing of some of the supported objects that are automatically bridged for yo
 
 ### Simple Execution
 
-Writing your first JavaScript is can be done in 2 lines of code:
+Writing your first JavaScript can be done in as little as 2 lines of code:
 1. Create a JavaScript context by allocating and initializing a new JSContext.
 2. Evaluate your JavaScript script code in the JSContext with the evaluate message.
 
