@@ -32,6 +32,7 @@
 		AE6B636717FC897500D3140E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6B634917FC897500D3140E /* UIKit.framework */; };
 		AE6B636F17FC897500D3140E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE6B636D17FC897500D3140E /* InfoPlist.strings */; };
 		AE6B637117FC897500D3140E /* javascriptIPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6B637017FC897500D3140E /* javascriptIPadTests.m */; };
+		AE9847761827E35900759A2A /* introViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9847751827E35900759A2A /* introViewController.m */; };
 		AEB6BFF2180F6F81007AE999 /* intro.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
 		AEB6BFF3180F71A3007AE999 /* intro.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFF1180F6F81007AE999 /* intro.js */; };
 		AEB6BFF6180F74DC007AE999 /* sortBubble.js in Sources */ = {isa = PBXBuildFile; fileRef = AEB6BFF5180F74DC007AE999 /* sortBubble.js */; };
@@ -87,6 +88,8 @@
 		AE6B636C17FC897500D3140E /* javascriptIPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "javascriptIPadTests-Info.plist"; sourceTree = "<group>"; };
 		AE6B636E17FC897500D3140E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6B637017FC897500D3140E /* javascriptIPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = javascriptIPadTests.m; sourceTree = "<group>"; };
+		AE9847741827E35900759A2A /* introViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = introViewController.h; sourceTree = "<group>"; };
+		AE9847751827E35900759A2A /* introViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = introViewController.m; sourceTree = "<group>"; };
 		AEB6BFF1180F6F81007AE999 /* intro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = intro.js; sourceTree = "<group>"; };
 		AEB6BFF5180F74DC007AE999 /* sortBubble.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortBubble.js; sourceTree = "<group>"; };
 		AEB6BFF7180F74E4007AE999 /* λ.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "λ.js"; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				AEB6BFFD180F7513007AE999 /* sortSelection.js */,
 				AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */,
 				AEB6C001180F75B6007AE999 /* dataStructureHeap.js */,
+				AE9847741827E35900759A2A /* introViewController.h */,
+				AE9847751827E35900759A2A /* introViewController.m */,
 			);
 			path = javascriptIPad;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				AEB6BFFA180F74FB007AE999 /* sortMerge.js in Sources */,
 				AE4CD2481811F52B00B326D8 /* filterMapReduce.js in Sources */,
 				AE4CD2421811E68700B326D8 /* JavaScriptCodeBlock.m in Sources */,
+				AE9847761827E35900759A2A /* introViewController.m in Sources */,
 				AEB6BFFE180F7513007AE999 /* sortSelection.js in Sources */,
 				AEB6C000180F75A1007AE999 /* dataStructureBinaryTree.js in Sources */,
 				AE4CD2461811F51E00B326D8 /* filterMap.js in Sources */,

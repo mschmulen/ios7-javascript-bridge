@@ -271,7 +271,8 @@
 }
 
 
-// UITableView methods
+#pragma mark - UITableView
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.tableData count];
@@ -304,6 +305,19 @@
         cell.textLabel.text = model.name;
     }
     return cell;
+}
+
+
+#pragma mark - prepare for segue
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    //showIntro
+    if ( [segue.identifier isEqualToString:@"showIntro"]) {
+        NSLog(@" Prparing for Intro");
+    }
 }
 
 - (void)viewDidLoad

@@ -65,9 +65,9 @@ Within any given JSVirtualMachine you can have an arbitrary number of JSContexts
 
 ###JSValue
 
-JSValue is a strong reference to a JavaScript value in a specific JS Context ( StrongReferenced to the JSContext it is associated or instantiated with)
+JSValue is a strong reference to a JavaScript value in a specific JS Context	 ( StrongReferenced to the JSContext it is associated or instantiated with)
 
-A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, changes to Objective-C values in JavaScript must be copied across the bridge boundry of the two execution environments.
+A JSValue is immutable, so you can’t modify it in Objective-C ( similar to NSString ) and therefore you cant change the value in your Objective-C code and expect it to be changed in yourJavaScript execution. Likewise, changes to Objective-C values in JavaScript must be copied across the bridge boundary of the two execution environments.
 
 JSValue automatically wraps many JavaScript value types, including language primitives and object types.  There are some additional helper methods for common use cases such as NSArray and NSDictionary.
 
