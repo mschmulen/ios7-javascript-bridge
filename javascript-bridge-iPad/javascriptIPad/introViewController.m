@@ -15,6 +15,10 @@
 @end
 
 @implementation introViewController
+- (IBAction)actionClose:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)setupPages {
     
