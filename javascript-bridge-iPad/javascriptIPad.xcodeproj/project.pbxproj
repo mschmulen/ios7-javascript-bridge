@@ -49,6 +49,7 @@
 		AEB6C007180F76E8007AE999 /* sortSelection.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFFD180F7513007AE999 /* sortSelection.js */; };
 		AEB6C008180F76E8007AE999 /* dataStructureBinaryTree.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */; };
 		AEB6C009180F76E8007AE999 /* dataStructureHeap.js in Resources */ = {isa = PBXBuildFile; fileRef = AEB6C001180F75B6007AE999 /* dataStructureHeap.js */; };
+		C92B9A2618C84BF00065D3EC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92B9A2518C84BF00065D3EC /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		AEB6BFFD180F7513007AE999 /* sortSelection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sortSelection.js; sourceTree = "<group>"; };
 		AEB6BFFF180F75A1007AE999 /* dataStructureBinaryTree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dataStructureBinaryTree.js; sourceTree = "<group>"; };
 		AEB6C001180F75B6007AE999 /* dataStructureHeap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dataStructureHeap.js; sourceTree = "<group>"; };
+		C92B9A2518C84BF00065D3EC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			files = (
 				AE6B634817FC897500D3140E /* CoreGraphics.framework in Frameworks */,
 				AE6B634A17FC897500D3140E /* UIKit.framework in Frameworks */,
+				C92B9A2618C84BF00065D3EC /* Crashlytics.framework in Frameworks */,
 				AE6B634617FC897500D3140E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +149,7 @@
 		AE6B634417FC897500D3140E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C92B9A2518C84BF00065D3EC /* Crashlytics.framework */,
 				AE6B634517FC897500D3140E /* Foundation.framework */,
 				AE6B634717FC897500D3140E /* CoreGraphics.framework */,
 				AE6B634917FC897500D3140E /* UIKit.framework */,
@@ -224,6 +228,7 @@
 				AE6B633E17FC897500D3140E /* Sources */,
 				AE6B633F17FC897500D3140E /* Frameworks */,
 				AE6B634017FC897500D3140E /* Resources */,
+				C92B9A2418C83FFE0065D3EC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -321,6 +326,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C92B9A2418C83FFE0065D3EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "./Crashlytics.framework/run bcc6ec11a2934eaf4cf2218cf4928e52b6f7be66 7bc6141c07aa883afa802c2e0c6a6689534531d449dca595702a05ed5563c5f9";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE6B633E17FC897500D3140E /* Sources */ = {
@@ -474,6 +495,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/matt/trees/mschmulen/ios7-javascript-bridge/javascript-bridge-iPad",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "javascriptIPad/javascriptIPad-Prefix.pch";
 				INFOPLIST_FILE = "javascriptIPad/javascriptIPad-Info.plist";
@@ -488,6 +513,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/matt/trees/mschmulen/ios7-javascript-bridge/javascript-bridge-iPad",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "javascriptIPad/javascriptIPad-Prefix.pch";
 				INFOPLIST_FILE = "javascriptIPad/javascriptIPad-Info.plist";
